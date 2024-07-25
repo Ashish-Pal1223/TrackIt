@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("/static/anime/images/attack on titan.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+
+.main-header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading {
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-form {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    display: flex;
+}
+
+.form-items {
+    vertical-align: middle;
+    margin: 10px;
+    padding: 10px;
+} 
+
+
+.main-container {
+    text-align: center;
+    padding: 16px;
+}
+
+.container {
+    display: inline-block;
+    width: 25%;
+    padding: 0px;
+    margin: 30px;
+    background-color: brown;
+    color: white;
+    text-align: center;     
+    height: 600px;
+    overflow: scroll;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.item {
+    list-style-type: none;
+    padding: 16px;
+    font-size: 30px;
+}
+
+li:nth-of-type(2) {
+    margin-top: 60px;
+}
+
+.fixed {
+    background-color: #8c1818;
+    width: 100%;
+    color: rgb(255, 56, 56);
+    font-weight: bold;
+    position: absolute;
+}
+
+.button {
+    background-color: brown;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover,
+.button:active {
+    background-color: #8c1818;
+    color: rgb(255, 56, 56);
+}

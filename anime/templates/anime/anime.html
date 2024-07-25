@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackIt</title>
+    <link rel="stylesheet" href="{% static "anime/anime.css" %}">
+    <script src="{% static "anime/errors.js" %}" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="heading">TrackIt</h1>
+        <form action="/" method="post" class="main-form">
+            {% csrf_token %}
+            {{ form }}
+            {% comment %} <select name="genre" class="form-items" placeholder="Genre">
+                <option value="action">Action</option>
+                <option value="romance">Romance</option>
+                <option value="psychological">Psychological</option>
+            </select> {% endcomment %}
+            <button type="submit" class="form-items button" value="add" name="action">Add Anime</button>
+            <button type="submit" class="form-items button" value="delete" name="action">Delete</button>
+        </form>
+    </header>
+    <div class="main-container">
+        <ul class="container">
+            <li class="item fixed">Action</li>
+            {% for anime in action_anime%}
+                <li class="item">{{ anime.title }} ({{ anime.rating }})</li>
+            {% endfor %}
+        </ul>
+        <ul class="container">
+            <li class="item fixed">Romance</li>
+            {% for anime in romance_anime%}
+                <li class="item">{{ anime.title }} ({{ anime.rating }})</li>
+            {% endfor %}
+        </ul>
+        <ul class="container">
+            <li class="item fixed">Psychological</li>
+            {% for anime in psychological_anime%}
+                <li class="item">{{ anime.title }} ({{ anime.rating }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
